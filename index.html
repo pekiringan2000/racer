@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WELCOME TO RACER</title>
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Welcome to Racer</h1>
+    <p>Dalam permainan ini Anda akan menebak pemain mana yang akan finish terlebih dahulu</p>
+
+    <h3>Caranya Mudah !</h3>
+    <p>Isilah jumlah pemain yang akan bertanding dan tekan tombol Start Game untuk memulai permainan</p>
+    
+  <input type="text" placeholder="Jumlah Pemain" id="input-baris">
+  <input type="text" placeholder="Jumlah Lintasan" id="input-kolom">
+
+  <button 
+    onclick="generateBoard()" class="start-game-button"
+    > Start Game
+    </button>
+    
+    <button 
+    onclick="rollDice()"  class="roll-dice-button"
+    > Roll Dice
+    </button>
+
+   <div id="containerGame" class="container" >
+  </div>
+    <script src="scripts/index.js"</script></script>
+</body>
+</html>
