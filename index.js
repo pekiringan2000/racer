@@ -25,7 +25,31 @@ for (i=0; i<jumlahBaris;i++){
  }
 console.log(containerGame)   
 }
-function rollDice() {
 
-}
 
+
+//roll dice
+
+var dice = {
+    sides: 6,
+    roll: function generatedice() {
+      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+      return randomNumber;
+    }
+  }
+
+  //Prints dice roll to the page
+
+function printNumber(number) {
+    var placeholder = document.getElementById('placeholder');
+    placeholder.innerHTML = number;
+  }
+  
+var rolldicebutton = document.getElementById('rolldicebutton');
+  
+function generatedice() {
+    var result = dice.roll();
+    printNumber(result);
+  };
+  
+  
