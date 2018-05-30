@@ -1,5 +1,13 @@
 var containerGame = document.getElementById('containerGame');
 
+var player = [{
+    nameOfPlayer: "A",
+    position:0
+},{
+    nameOfPlayer: "B",
+    position:0
+}]
+
 function generateBoard(){
 //genearate board for game
 //clear existing board
@@ -26,16 +34,15 @@ for (i=0; i<jumlahBaris;i++){
 console.log(containerGame)   
 }
 
+function gerak() {
 
+}
 
 //roll dice
 
-var dice = {
-    sides: 6,
-    roll: function generatedice() {
-      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-      return randomNumber;
-    }
+ function roll() {
+    var randomNumber = Math.floor(Math.random() *6) + 1;
+    return randomNumber;
   }
 
   //Prints dice roll to the page
@@ -48,8 +55,14 @@ function printNumber(number) {
 var rolldicebutton = document.getElementById('rolldicebutton');
   
 function generatedice() {
-    var result = dice.roll();
+    var result = roll();
     printNumber(result);
-  };
+    player[0].position = player[0].position+result;
+    console.log("===>",player);
+    move();
+    moved();
+  }
   
-  
+function move() {
+    document.getElementById('box0'+player[0].position).style.backgroundColor = "red";
+}      
