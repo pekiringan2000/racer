@@ -34,10 +34,6 @@ for (i=0; i<jumlahBaris;i++){
 console.log(containerGame)   
 }
 
-function gerak() {
-
-}
-
 //roll dice
 
  function roll() {
@@ -60,7 +56,6 @@ function generatedice() {
     player[0].position = player[0].position+result;
     console.log("===>",player);
     move();
-    moved();
   }
   
 function move() {
