@@ -1,7 +1,7 @@
 
 
 var containerGame = document.getElementById('containerGame');
-var cadanganPlayer = ['assets/A.png', 'assets/B.png', 'assets/C.png', 'assets/D.png'];
+var cadanganPlayer = ['A.png', 'B.png', 'C.png', 'D.png'];
 var players = []
 
 var panjangLintasan;
@@ -29,7 +29,9 @@ function generateRace () {
 }
 
 function rollDice () {
+    console.log("====> ",isWin)
     if (isWin) {
+       winner()
        return
     }
     var randomNumber = Math.floor(Math.random() *6) + 1;
@@ -62,10 +64,11 @@ function printRace () {
                 divKolom.style.backgroundImage = "url(" +players[i].name + ")";
             //untuk menambah var ke string "+"
             }
-            if (players[i].position >= Number(panjangLintasan)) {
-                isWin === true
-                divKolom.style.backgroundImage = "url(" +players[i].name + ")";
-                winner()
+            if (players[i].position >= Number(panjangLintasan-1)) {
+                isWin = true
+                // return
+                // divKolom.style.backgroundImage = "url(" +players[i].name + ")";
+                // winner()
             }
 
             divBaris.appendChild(divKolom)
@@ -75,6 +78,7 @@ function printRace () {
 }
 
 function winner() {
+    // console.log("MASUK FUNCTION WINNER")
     if (isWin) {
         alert('WIN');
     }
