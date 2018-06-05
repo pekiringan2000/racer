@@ -72,15 +72,12 @@
 
 
 var containerGame = document.getElementById('containerGame');
-var players = [
-    {
-        name: 0,
-        position: 0
-    }]
+var cadanganPlayer = 'abcdefgh';
+var players = []
 
 var panjangLintasan;
 var maxPlayer;
-var currentPlayer 
+var currentPlayer; 
 
 function generateRace () {
     console.log('loloolololo')
@@ -89,23 +86,24 @@ function generateRace () {
     maxLintasan = panjangLintasan;
     maxPlayer = document.getElementById('input-baris').value;
 
-    for (i=0; i<maxPlayer-1; i++) {
+    for (i=0; i < maxPlayer; i++) {
         player = {
-            name:i ,
-            position:0
+            name: cadanganPlayer[i],
+            position: 0
         }
         players.push(player)
     }
 }
 
-
 function rollDice () {
     var randomNumber = Math.floor(Math.random() *6) + 1;
+    if (currentPlayer === Number(maxPlayer)) {
+        currentPlayer = 0
+    }
     players[currentPlayer].position += randomNumber;
-
     if (currentPlayer<maxPlayer) {
         currentPlayer++
-     }
+    } 
 }
 
 function printRace () {
