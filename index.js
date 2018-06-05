@@ -9,7 +9,7 @@ var maxPlayer;
 var currentPlayer; 
 
 function generateRace () {
-    console.log('loloolololo')
+    //console.log('loloolololo')
     panjangLintasan = document.getElementById('input-kolom').value;
     currentPlayer = 0;
     maxLintasan = panjangLintasan;
