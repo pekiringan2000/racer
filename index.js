@@ -16,7 +16,7 @@ function generateRace () {
 
     maxPlayer = document.getElementById('input-baris').value;
 
-   if (panjangLintasan>10){     
+   if (panjangLintasan>6){     
     for (i=0; i < maxPlayer; i++) {
         player = {
             name: cadanganPlayer[i],
@@ -25,7 +25,7 @@ function generateRace () {
         players.push(player)
     }
     printRace()
-    } else { console.log ('tidak dapat lanjut')}
+    } else { alert('Lintasan Min 7')}
 }
 
 function rollDice () {
@@ -45,7 +45,6 @@ function rollDice () {
     printRace()
 
 }
-
 
 function printRace () {
     containerGame.innerHTML='';
