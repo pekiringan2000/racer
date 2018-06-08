@@ -13,31 +13,40 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>  
-    <h1>Welcome to Racer</h1>
-    <h3>Caranya Mudah !</h3>
-    <p>Isilah jumlah pemain yang akan bertanding dan tekan tombol Start Game untuk memulai permainan</p>
-   <p> 
-  <input type="text" placeholder="Jumlah Pemain" id="input-baris">
-  <input type="text" placeholder="Jumlah Lintasan" id="input-kolom">
-  </p>
+    <div class="header">
+    <h1>W e l c o m e   T o R a c e r</h1>
+    </div>
 
-     <p><button 
-    onclick="generateRace()" class="start-game-button"
-    > Start Game
-    </button>
+    <h3>Caranya Mudah !</h3>
+    <p>Isilah jumlah pemain yang akan bertanding 
+      dan jumlah lintasan tekan tombol Start Game untuk memulai permainan
+      **Jumlah Lintasan Minimal 7**
+    </p>
+  
+    
+    <p> 
+    <input type="text" placeholder="Jumlah Pemain" id="input-baris">
+    <input type="text" placeholder="Jumlah Lintasan" id="input-kolom">
     </p>
     
-   
     <p><button 
-    onclick="rollDice()" class="rolldicebutton">
-    Roll Dice
-    </button>
-    </p>  
+        onclick="generateRace()" class="start-game-button"
+        > Start Game
+        </button>
+        
+        <button 
+        onclick="rollDice()" class="rolldicebutton">  
+        Roll Dice
+        </button>
+        
+        
+    </p>
+    <p id="nilaidadu">Nilai Dadu</p>
     <p id="keterangan">Giliran Pemain</p>
- 
 
-   <div id="containerGame" class="container" >
-  </div>
+    <div id="containerGame" class="container" >
+ 
+    </div>
     <script src="index.js"</script></script>
 </body>
 </html>
