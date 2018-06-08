@@ -72,7 +72,7 @@ function printRace () {
         
                
         for (j=0;j<panjangLintasan;j++) {
-            var divKolom = document.createElement('div');
+            var divKolom = document.createElement('TD');
                     divKolom.id = 'box'+i+j;
                     divKolom.className='box';
         // untuk membuat posisi player                    
