@@ -10,6 +10,7 @@
 
     <title>WELCOME TO RACER</title>
     
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700|Righteous' rel='stylesheet' type='text/css'>
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>  
@@ -29,20 +30,35 @@
     <input type="text" placeholder="Jumlah Lintasan" id="input-kolom">
     </p>
     
-    <p><button 
+      
+      
+    <div id="buttons">
+      <div class="quarter">
+        <button 
         onclick="generateRace()" class="start-game-button"
         > Start Game
         </button>
-        
+      </div>  
+      
+      <div class="quarter">
         <button 
         onclick="rollDice()" class="rolldicebutton">  
         Roll Dice
         </button>
-        
-        
-    </p>
-    <p id="nilaidadu">Nilai Dadu</p>
-    <p id="keterangan">Giliran Pemain</p>
+      </div>
+
+      <div id="nilaidadu" class="quarter">  
+       Nilai Dadu
+      </div>
+
+      <div  id="keterangan" class="quarter">
+        Giliran Pemain
+       </div>
+  
+
+    </div>
+
+  
 
     <div id="containerGame" class="container" >
  
