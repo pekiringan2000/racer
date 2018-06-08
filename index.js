@@ -1,5 +1,3 @@
-
-
 var containerGame = document.getElementById('containerGame');
 var cadanganPlayer = [
                         ['A','A.png'],
@@ -47,6 +45,7 @@ function rollDice () {
     }
     players[currentPlayer].position += randomNumber;
     document.getElementById('keterangan').innerHTML = "Giliran Pemain "+players[currentPlayer].name;
+    document.getElementById('nilaidadu').innerHTML = "Nilai DADU "+randomNumber;
 
     if (players[currentPlayer].position >= Number(panjangLintasan-1)) {
         isWin = true;
@@ -78,7 +77,16 @@ function printRace () {
                     divKolom.className='box';
         // untuk membuat posisi player                    
             if (j === players[i].position) {    
-                divKolom.style.backgroundImage = "url(" +players[i].img + ")";
+                // cara 1 : pakai background.cuma gambar kecilin sendiri
+                // divKolom.style.backgroundImage = "url(" +players[i].img + ")";
+                //cara 2 : pakai source gambar kita atur
+                var icon = document.createElement('img');
+                icon.src = players[i].img;
+                icon.width = 25;
+                icon.height = 25;   
+                
+                
+                divKolom.appendChild(icon)
             }
                       
             divBaris.appendChild(divKolom)
